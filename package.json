@@ -1,15 +1,31 @@
 {
   "name": "news-article-nlp",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Evaluate a news article with Natural Language Processing project from Udacity's Front-End Nanodegree program",
+  "main": "src/server/index.js",
   "scripts": {
+    "start": "node src/server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@me.github.com:skb1129/news-article-nlp.git"
+    "url": "git@github.com:skb1129/news-article-nlp.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "aylien_textapi": "^0.7.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "eslint": "^6.1.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
 }
