@@ -7,7 +7,7 @@
     "start": "npm run build && node src/server/index.js",
     "build": "webpack --mode production",
     "client": "webpack-dev-server",
-    "server": "npm run build && nodemon src/server/index.js",
+    "server": "nodemon src/server/index.js",
     "test": "jest"
   },
   "repository": {

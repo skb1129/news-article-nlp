@@ -7,6 +7,12 @@ module.exports = {
   devServer: {
     host: "localhost",
     port: "3000",
+    proxy: [
+      {
+        context: ["/article", "/api"],
+        target: "http://localhost:8000"
+      }
+    ],
     hot: true,
     overlay: true,
     headers: {

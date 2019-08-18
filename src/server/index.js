@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const Aylien = require("aylien_textapi");
 
-const PORT = 3000;
+const PORT = 8000;
 
 const app = express();
 app.use(cors());
