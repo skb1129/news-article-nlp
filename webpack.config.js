@@ -16,7 +16,7 @@ module.exports = {
   entry: "./src/client/index.js",
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "bundle.min.js",
+    filename: "bundle-[hash].min.js",
     libraryTarget: "var",
     library: "Client"
   },
