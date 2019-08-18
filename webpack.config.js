@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   devServer: {
@@ -33,6 +34,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin({ verbose: true }),
     new HtmlWebPackPlugin({
       template: "./src/client/views/index.html",
       hash: true,
