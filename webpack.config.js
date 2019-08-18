@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   devServer: {
@@ -39,6 +40,7 @@ module.exports = {
       template: "./src/client/views/index.html",
       hash: true,
       xhtml: true
-    })
+    }),
+    new WorkboxPlugin.GenerateSW()
   ]
 };
