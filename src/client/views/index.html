@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>News Article NLP</title>
+  </head>
+  <body>
+    <header>
+      <h1>News Article NLP</h1>
+    </header>
+
+    <main>
+      <h2>Natural Language Processing</h2>
+
+      <p>
+        Natural language processing (NLP) is a branch of artificial intelligence
+        that helps computers understand, interpret and manipulate human
+        language. NLP draws from many disciplines, including computer science
+        and computational linguistics, in its pursuit to fill the gap between
+        human communication and computer understanding.
+      </p>
+
+      <p>
+        The Aylien Text Analysis API provides powerful and flexible AI-driven
+        content analysis solutions that bring the power of NLP to the masses. We
+        help developers, data scientists, and marketers understand
+        human-generated textual content at scale.
+      </p>
+
+      <form class="" onsubmit="return Client.handleSubmit(event)">
+        <label for="test-statement">
+          Try it out! Type in a statement to see what the Aylien NLP understands
+          from it:
+        </label>
+        <input
+          id="test-statement"
+          type="text"
+          placeholder="John is a very good football player."
+        />
+        <input class="submit-button" type="submit" value="Submit" />
+      </form>
+
+      <section class="text-results">
+        <ul>
+          <li>
+            <h3>Text Polarity:</h3>
+            <p id="text_polarity"></p>
+            <h4>Confidence:</h4>
+            <p id="text_polarity_confidence"></p>
+          </li>
+
+          <li>
+            <h3>Text Subjectivity:</h3>
+            <p id="text_subjectivity"></p>
+            <h4>Confidence:</h4>
+            <p id="text_subjectivity_confidence"></p>
+          </li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <form class="" onsubmit="return Client.handleSubmitArticle(event)">
+        <label for="test-url">
+          Or, try putting in the url of an article - like from your favorite
+          news source.
+        </label>
+        <input id="test-url" type="url" placeholder="https://..." />
+        <input class="submit-button" type="submit" value="Submit" />
+        <p>
+          Watch out though, each of these requests take up 3 of your allotted
+          1000 API hits today
+        </p>
+      </form>
+
+      <section class="url-results">
+        <ul>
+          <li>
+            <h3>Text Polarity:</h3>
+            <p id="polarity"></p>
+            <h4>Confidence:</h4>
+            <p id="polarity_confidence"></p>
+          </li>
+
+          <li>
+            <h3>Text Subjectivity:</h3>
+            <p id="subjectivity"></p>
+            <h4>Confidence:</h4>
+            <p id="subjectivity_confidence"></p>
+          </li>
+
+          <li>
+            <h3>Text Excerpt:</h3>
+            <p id="excerpt"></p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Surya Kant Bansal</p>
+    </footer>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/service-worker.js");
+        });
+      }
+    </script>
+  </body>
+</html>

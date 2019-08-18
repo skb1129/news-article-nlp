@@ -1,0 +1,35 @@
+form {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="url"] {
+  width: 60%;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: #b8b8b8;
+  font-size: 1.6rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.submit-button {
+  padding: 2rem;
+}
+
+// Tablet
+@media only screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="url"] {
+    width: 95%;
+  }
+}
