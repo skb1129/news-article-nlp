@@ -1,7 +1,7 @@
 function handleSubmit(event) {
   event.preventDefault();
   const text = document.getElementById("test-statement").value;
-
+  if (!text) return;
   console.log(text);
   fetch("/api", {
     method: "POST",

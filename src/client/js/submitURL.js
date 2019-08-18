@@ -1,7 +1,7 @@
 function handleSubmitArticle(event) {
   event.preventDefault();
   const url = document.getElementById("test-url").value;
-
+  if (!url) return;
   console.log(url);
   fetch("/article", {
     method: "POST",
