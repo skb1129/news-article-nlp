@@ -5,7 +5,7 @@
   "main": "src/server/index.js",
   "scripts": {
     "start": "npm run build && node src/server/index.js",
-    "build": "webpack --mode production",
+    "build": "webpack --env=production",
     "client": "webpack-dev-server",
     "server": "nodemon src/server/index.js",
     "test": "jest"
